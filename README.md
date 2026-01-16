@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Integrated Expertco Project
 
 A modern web application combining the best of both Expertco and SpecDriven projects. Built with HTML/CSS/JavaScript frontend and Python Flask backend with MySQL database.
@@ -246,3 +247,7 @@ This project is for portfolio/educational purposes.
 
 For questions or issues, please refer to the contact form on the website.
 
+=======
+# Expertco
+>Expertco Ltd is a sales, marketing, and business growth consultancy helping organizations achieve measurable revenue growth through structured sales execution, digital visibility, key account management, and strategic advisory. With over 15 years of experience across Africa in business development, operations, and leadership.
+>>>>>>> 89d8de36ae521d7401b85551b3b2e8a201c7a945
