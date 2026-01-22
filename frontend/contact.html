@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/config.js"></script>
 </head>
@@ -32,69 +33,113 @@
     <main id="main" class="site-main">
         <section class="contact-hero">
             <div class="container">
-                <h1>Get in <span class="accent">Touch</span></h1>
-                <p class="hero-subtitle">Ready to transform your sales? Let's start a conversation about how we can help your business grow.</p>
+                <div class="hero-content-center">
+                    <h1>Get in <span class="accent">Touch</span></h1>
+                    <p class="hero-subtitle">Ready to transform your sales? Let's start a conversation about how we can help your business grow.</p>
+                </div>
             </div>
         </section>
 
         <div id="flash-messages" class="flash-group" role="status" aria-live="polite" style="display: none;"></div>
         
-        <div class="container">
-            <section class="section contact-form-section">
-                <form id="contactForm" method="POST" novalidate>
-                    <div class="field">
-                        <label for="name">Name *</label>
-                        <input type="text" id="name" name="name" required minlength="2" maxlength="100">
+        <section class="contact-form-section">
+            <div class="container">
+                <div class="form-container">
+                    <div class="form-header">
+                        <h2>Send us a Message</h2>
+                        <p>Fill out the form below and we'll get back to you within 24 hours.</p>
                     </div>
-                    <div class="field">
-                        <label for="email">Email *</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="field">
-                        <label for="company">Company</label>
-                        <input type="text" id="company" name="company" maxlength="255">
-                    </div>
-                    <div class="field">
-                        <label for="phone">Phone</label>
-                        <input type="tel" id="phone" name="phone" maxlength="50">
-                    </div>
-                    <div class="field">
-                        <label for="message">Message *</label>
-                        <textarea id="message" name="message" required minlength="10" maxlength="1000"></textarea>
-                    </div>
-                    <button type="submit">Send Message</button>
-                </form>
-            </section>
+                    <form id="contactForm" method="POST" novalidate class="contact-form">
+                        <div class="form-row">
+                            <div class="field">
+                                <label for="name">Name *</label>
+                                <input type="text" id="name" name="name" required minlength="2" maxlength="100">
+                            </div>
+                            <div class="field">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="field">
+                                <label for="company">Company</label>
+                                <input type="text" id="company" name="company" maxlength="255">
+                            </div>
+                            <div class="field">
+                                <label for="phone">Phone</label>
+                                <input type="tel" id="phone" name="phone" maxlength="50">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" required minlength="10" maxlength="1000" placeholder="Tell us about your project or how we can help..."></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <i data-lucide="send"></i>
+                            <span>Send Message</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
 
-            <section class="section">
-                <h2 class="text-center">Other Ways to Reach Us</h2>
-                <div class="grid cols-3">
-                    <div class="card text-center">
-                        <div class="icon-circle">✉️</div>
-                        <h3>Email</h3>
-                        <p class="muted">expertco.com</p>
+        <section class="contact-info-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Other Ways to <span class="accent">Connect</span></h2>
+                    <p>Choose the method that works best for you</p>
+                </div>
+                <div class="contact-methods">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i data-lucide="mail"></i>
+                        </div>
+                        <h3>Email Us</h3>
+                        <p>info@expertcoltd.com</p>
+                        <a href="mailto:info@expertcoltd.com" class="contact-link">Send Email</a>
                     </div>
-                    <div class="card text-center">
-                        <div class="icon-circle">📞</div>
-                        <h3>Phone</h3>
-                        <p class="muted">+254 732 271 731</p>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i data-lucide="phone"></i>
+                        </div>
+                        <h3>Call Us</h3>
+                        <p>+254 732 271 731</p>
+                        <a href="tel:+254732271731" class="contact-link">Call Now</a>
                     </div>
-                    <div class="card text-center">
-                        <div class="icon-circle">📍</div>
-                        <h3>Location</h3>
-                        <p class="muted">Sarit Centre, Nairobi, Kenya</p>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i data-lucide="map-pin"></i>
+                        </div>
+                        <h3>Visit Us</h3>
+                        <p>Sarit Centre, Nairobi, Kenya</p>
+                        <a href="#" class="contact-link">Get Directions</a>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="social-section">
-                    <h3>Connect With Us</h3>
-                    <div class="social-links-center">
-                        <a href="#" class="social-link" aria-label="LinkedIn">in</a>
-                        <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+        <section class="social-connect-section">
+            <div class="container">
+                <div class="social-content">
+                    <h2>Follow Our Journey</h2>
+                    <p>Stay connected with us on social media for the latest insights and updates</p>
+                    <div class="social-links-large">
+                        <a href="https://www.linkedin.com/company/expertco-kenya/?viewAsMember=true" target="_blank" rel="noopener noreferrer" class="social-link-large" aria-label="LinkedIn">
+                            <i data-lucide="linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://www.tiktok.com/@expertcoltd?_r=1&_t=ZS-938sBVwLWVj" target="_blank" rel="noopener noreferrer" class="social-link-large" aria-label="TikTok">
+                            <i data-lucide="music"></i>
+                            <span>TikTok</span>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="social-link-large" aria-label="Instagram">
+                            <i data-lucide="instagram"></i>
+                            <span>Instagram</span>
+                        </a>
                     </div>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
     </main>
     <footer class="site-footer">
         <div class="container">
@@ -158,6 +203,29 @@
         </div>
     </footer>
     <script src="js/main.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // Animate sections on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all animatable sections
+        document.querySelectorAll('.contact-form-section, .contact-info-section, .social-connect-section, .contact-card, .form-container').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
 
